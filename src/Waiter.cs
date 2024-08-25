@@ -14,6 +14,13 @@ public class Waiter
     {
         this.name = name;
     }
+    
+    public string Name
+    {
+        get { return name; } 
+        set { name = value; }
+    }
+    
     public void AssignTable(Table table)
     {
         this.assignedTables.Add(table);
