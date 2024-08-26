@@ -26,7 +26,7 @@ public class Table
     {
         this.order.Add(plato);
     }
-    
+
     public bool HasOrders()
     {
         return this.order.Count > 0;
