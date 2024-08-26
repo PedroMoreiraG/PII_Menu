@@ -10,6 +10,7 @@ public class Table
     private int number;
     private Boolean IsOccupied;
     private ArrayList order = new ArrayList();
+    private Double total;
 
     public void Occupy()
     {
@@ -30,5 +31,20 @@ public class Table
     public bool HasOrders()
     {
         return this.order.Count > 0;
+    }
+
+    public double GetTotal()
+    {
+        if (this.order.Count > 0)
+        {
+            foreach (ArrayList platos in this.order)
+            {
+                foreach (double precio in platos)
+                {
+                    this.total += precio;
+                }
+            }
+        }
+        return this.total;
     }
 }
